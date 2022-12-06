@@ -7,7 +7,14 @@ namespace R5T.F0089.Construction
     {
         static void Main()
         {
-            Console.WriteLine("Hello World!");
+            //Try.Instance.GetRepositoryContextFromLibraryContext();
+            //Try.Instance.GetSolutionContextFromLibraryContext();
+            //Try.Instance.GetConsoleProjectContextFromLibraryContext();
+            //Try.Instance.GetConsoleLibraryProjectContextFromLibraryContext();
+            //Try.Instance.GetLibraryProjectContextFromLibraryContext();
+            //Try.Instance.GetLibraryConstructionProjectContextFromLibraryContext();
+            //Try.Instance.GetWebServerForBlazorClientProjectContextFromLibraryContext();
+            Try.Instance.GetWebBlazorClientProjectContextFromLibraryContext();
         }
     }
 }
