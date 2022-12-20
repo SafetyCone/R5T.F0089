@@ -111,6 +111,42 @@ namespace R5T.F0089
             return repositoryContext;
         }
 
+        public N005.RepositoryContext GetRepositoryContext(
+            LibraryContext libraryContext,
+            string ownerName,
+            bool isPrivate,
+            string repositoriesDirectoryPath)
+        {
+            var unadjustedRepositoryName = Instances.RepositoryNameOperator.GetRepositoryName_FromLibraryName(
+                libraryContext.LibraryName);
+
+            var privacyAdjustedRepositoryName = Instances.RepositoryNameOperator.AdjustRepositoryNameForPrivacy(
+                unadjustedRepositoryName,
+                isPrivate);
+
+            var repositoryName = privacyAdjustedRepositoryName;
+
+            var repositoryDescription = Instances.RepositoryDescriptionOperator.GetRepositoryDescription_FromLibraryDescription(
+                libraryContext.LibraryDescription);
+
+            var repositoryDirectoryPath = this.GetRepositoryDirectoryPath(
+                repositoriesDirectoryPath,
+                repositoryName);
+
+            var repositoryContext = new N005.RepositoryContext
+            {
+                RepositoryOwner = ownerName,
+                RepositoryName = repositoryName,
+                RepositoryDescription = repositoryDescription,
+                UnadjustedRepositoryName = unadjustedRepositoryName,
+                PrivacyAdjustedRepositoryName = privacyAdjustedRepositoryName,
+                IsPrivate = isPrivate,
+                LocalDirectoryPath = repositoryDirectoryPath,
+            };
+
+            return repositoryContext;
+        }
+
         public N003.RepositoryContext GetRepositoryContext(
 			LibraryContext libraryContext,
 			bool isPrivate)

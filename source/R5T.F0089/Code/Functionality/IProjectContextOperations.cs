@@ -3,12 +3,25 @@ using System;
 using R5T.T0132;
 using R5T.T0153;
 
+using N001 = R5T.T0153.N001;
+
 
 namespace R5T.F0089
 {
 	[FunctionalityMarker]
 	public partial interface IProjectContextOperations : IFunctionalityMarker
 	{
+        public Func<TSolutionContext, ProjectContext> GetProjectContext<TSolutionContext>(
+            string projectName,
+            string projectDescription)
+            where TSolutionContext : IHasSolutionDirectoryPath
+        {
+            return projectContext => this.GetProjectContext(
+                projectName,
+                projectDescription,
+                projectContext.SolutionDirectoryPath);
+        }
+
         public ProjectContext GetProjectContext(
             string projectName,
             string projectDescription,
@@ -223,5 +236,28 @@ namespace R5T.F0089
 
             return projectContext;
 		}
-	}
+
+        public ProjectContext GetProjectContext(
+            LibraryContext libraryContext,
+            string solutionDirectoryPath)
+        {
+            var projectName = Instances.ProjectNameOperator.GetProjectName_FromLibraryName(
+                libraryContext.LibraryName);
+
+            var projectDescription = Instances.ProjectDescriptionOperator.GetProjectDescription_FromLibraryDescription(
+                libraryContext.LibraryDescription);
+
+            var projectContext = new ProjectContext
+            {
+                ProjectName = projectName,
+                ProjectDescription = projectDescription,
+            };
+
+            this.FillProjectContext(projectContext,
+                projectName,
+                solutionDirectoryPath);
+
+            return projectContext;
+        }
+    }
 }

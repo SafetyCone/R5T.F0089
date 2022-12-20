@@ -2,6 +2,8 @@ using System;
 
 using R5T.T0132;
 using R5T.T0153;
+
+using N001 = R5T.T0153.N001;
 using N003 = R5T.T0153.N003;
 
 
@@ -65,6 +67,20 @@ namespace R5T.F0089
 				SolutionDescription = solutionDescription,
 				SolutionDirectoryPath = solutionDirectoryPath,
 				SolutionFilePath = solutionFilePath,
+			};
+
+			return solutionContext;
+		}
+
+		public N001.SolutionContext GetSolutionContext(
+			string solutionFilePath)
+		{
+			var solutionDirectoryPath = Instances.SolutionPathsOperator.GetSolutionDirectoryPath_FromSolutionFilePath(solutionFilePath);
+
+			var solutionContext = new N001.SolutionContext
+			{
+				SolutionFilePath = solutionFilePath,
+				SolutionDirectoryPath = solutionDirectoryPath,
 			};
 
 			return solutionContext;
