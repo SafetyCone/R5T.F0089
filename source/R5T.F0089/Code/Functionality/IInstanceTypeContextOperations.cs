@@ -25,14 +25,14 @@ namespace R5T.F0089
 			var classTypeName = F0000.TypeNameOperator.Instance.GetClassTypeName(instanceTypeNameStem);
 			var interfaceTypeName = F0000.TypeNameOperator.Instance.GetInterfaceTypeName(instanceTypeNameStem);
 
-			var markerAttributeTypeName = F0000.NamespacedTypeNameOperator.Instance.GetTypeName(
+			var markerAttributeTypeName = F0000.NamespacedTypeNameOperator.Instance.Get_TypeName(
 				instanceTypeInformation.MarkerAttributeNamespacedTypeName);
-			var markerAttributeNamespaceName = F0000.NamespacedTypeNameOperator.Instance.GetNamespaceName(
+			var markerAttributeNamespaceName = F0000.NamespacedTypeNameOperator.Instance.Get_NamespaceName(
 				instanceTypeInformation.MarkerAttributeNamespacedTypeName);
 
-            var markerInterfaceTypeName = F0000.NamespacedTypeNameOperator.Instance.GetTypeName(
+            var markerInterfaceTypeName = F0000.NamespacedTypeNameOperator.Instance.Get_TypeName(
                 instanceTypeInformation.MarkerInterfaceNamespacedTypeName);
-            var markerInterfaceNamespaceName = F0000.NamespacedTypeNameOperator.Instance.GetNamespaceName(
+            var markerInterfaceNamespaceName = F0000.NamespacedTypeNameOperator.Instance.Get_NamespaceName(
                 instanceTypeInformation.MarkerInterfaceNamespacedTypeName);
 
 			var interfacesDirectoryPath = ProjectPathsOperator.Instance.GetPath_ForProjectDirectoryRelativePath(
