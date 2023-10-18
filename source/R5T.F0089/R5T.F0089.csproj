@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <NoWarn>1591</NoWarn>
@@ -15,16 +15,12 @@
     <RepositoryUrl>https://github.com/SafetyCone/R5T.F0089.git</RepositoryUrl>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\R5T.F0040\source\R5T.F0040.F000\R5T.F0040.F000.csproj" />
     <ProjectReference Include="..\..\..\R5T.F0041\source\R5T.F0041\R5T.F0041.csproj" />
-    <ProjectReference Include="..\..\..\R5T.F0046\source\R5T.F0046\R5T.F0046.csproj" />
     <ProjectReference Include="..\..\..\R5T.F0048\source\R5T.F0048\R5T.F0048.csproj" />
     <ProjectReference Include="..\..\..\R5T.F0050\source\R5T.F0050\R5T.F0050.csproj" />
     <ProjectReference Include="..\..\..\R5T.F0052\source\R5T.F0052\R5T.F0052.csproj" />
     <ProjectReference Include="..\..\..\R5T.F0055\source\R5T.F0055\R5T.F0055.csproj" />
-    <ProjectReference Include="..\..\..\R5T.F0057\source\R5T.F0057\R5T.F0057.csproj" />
     <ProjectReference Include="..\..\..\R5T.L0026\source\R5T.L0026.T000\R5T.L0026.T000.csproj" />
-    <ProjectReference Include="..\..\..\R5T.T0132\source\R5T.T0132\R5T.T0132.csproj" />
     <ProjectReference Include="..\..\..\R5T.T0153\source\R5T.T0153\R5T.T0153.csproj" />
     <ProjectReference Include="..\..\..\R5T.Z0007\source\R5T.Z0007\R5T.Z0007.csproj" />
   </ItemGroup>
