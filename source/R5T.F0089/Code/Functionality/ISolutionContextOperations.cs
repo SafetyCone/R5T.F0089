@@ -18,7 +18,7 @@ namespace R5T.F0089
             var repositorySourceDirectoryPath = Instances.RepositoryPathsOperator.GetSourceDirectoryPath(
                 repositoryDirectoryPath);
 
-            var solutionDirectoryPath = Instances.SolutionPathsOperator.GetSolutionDirectoryPath_FromRepositorySourceDirectoryPath(
+            var solutionDirectoryPath = Instances.SolutionPathsOperator.Get_SolutionDirectoryPath_FromRepositorySourceDirectoryPath(
                 repositorySourceDirectoryPath);
 
 			return solutionDirectoryPath;
@@ -55,7 +55,7 @@ namespace R5T.F0089
 
 			var solutionDirectoryPath = this.GetSolutionDirectoryPath(repositoryDirectoryPath);
 
-			var solutionFilePath = Instances.SolutionPathsOperator.GetSolutionFilePath(
+			var solutionFilePath = Instances.SolutionPathsOperator.Get_SolutionFilePath(
 				solutionDirectoryPath,
 				solutionName);
 
@@ -75,7 +75,7 @@ namespace R5T.F0089
 		public N001.SolutionContext GetSolutionContext(
 			string solutionFilePath)
 		{
-			var solutionDirectoryPath = Instances.SolutionPathsOperator.GetSolutionDirectoryPath_FromSolutionFilePath(solutionFilePath);
+			var solutionDirectoryPath = Instances.SolutionPathsOperator.Get_SolutionDirectoryPath_FromSolutionFilePath(solutionFilePath);
 
 			var solutionContext = new N001.SolutionContext
 			{

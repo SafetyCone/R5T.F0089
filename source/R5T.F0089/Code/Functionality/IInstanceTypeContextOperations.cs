@@ -41,7 +41,7 @@ namespace R5T.F0089
 
 			var interfaceCodeFileName = CodeFileNameOperator.Instance.GetCSharpCodeFileName_ForTypeName(interfaceTypeName);
 
-			var interfaceCodeFilePath = PathOperator.Instance.GetFilePath(
+			var interfaceCodeFilePath = PathOperator.Instance.Get_FilePath(
 				interfacesDirectoryPath,
 				interfaceCodeFileName);
 
@@ -51,7 +51,7 @@ namespace R5T.F0089
 
 			var classCodeFileName = CodeFileNameOperator.Instance.GetCSharpCodeFileName_ForTypeName(classTypeName);
 
-			var classCodeFilePath = PathOperator.Instance.GetFilePath(
+			var classCodeFilePath = PathOperator.Instance.Get_FilePath(
 				classesDirectoryPath,
                 classCodeFileName);
 
