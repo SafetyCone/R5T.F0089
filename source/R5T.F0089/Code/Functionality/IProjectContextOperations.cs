@@ -44,8 +44,8 @@ namespace R5T.F0089
             LibraryContext libraryContext,
             string solutionDirectoryPath)
         {
-            var projectName = Instances.ProjectNameOperator.GetProjectName_FromLibraryName(libraryContext.LibraryName);
-            var projectDescription = Instances.ProjectDescriptionOperator.GetProjectDescription_FromLibraryDescription(libraryContext.LibraryDescription);
+            var projectName = Instances.ProjectNameOperator.Get_ProjectName_FromLibraryName(libraryContext.LibraryName);
+            var projectDescription = Instances.ProjectDescriptionOperator.Get_ProjectDescription_FromLibraryDescription(libraryContext.LibraryDescription);
 
             var projectContext = this.GetProjectContext(
                 projectName,
@@ -60,14 +60,14 @@ namespace R5T.F0089
             string projectName,
             string solutionDirectoryPath)
         {
-            var projectDefaultNamespace = Instances.ProjectNamespacesOperator.GetDefaultNamespaceName_FromProjectName(
+            var projectDefaultNamespace = Instances.ProjectNamespacesOperator.Get_DefaultNamespaceName_FromProjectName(
                 projectName);
 
-            var projectDirectoryPath = Instances.ProjectPathsOperator.GetProjectDirectoryPath_FromSolutionDirectoryPath(
+            var projectDirectoryPath = Instances.ProjectPathsOperator.Get_ProjectDirectoryPath_FromSolutionDirectoryPath(
                 solutionDirectoryPath,
                 projectName);
 
-            var projectFilePath = Instances.ProjectPathsOperator.GetProjectFilePath(
+            var projectFilePath = Instances.ProjectPathsOperator.Get_ProjectFilePath(
                 projectDirectoryPath,
                 projectName);
 
@@ -241,10 +241,10 @@ namespace R5T.F0089
             LibraryContext libraryContext,
             string solutionDirectoryPath)
         {
-            var projectName = Instances.ProjectNameOperator.GetProjectName_FromLibraryName(
+            var projectName = Instances.ProjectNameOperator.Get_ProjectName_FromLibraryName(
                 libraryContext.LibraryName);
 
-            var projectDescription = Instances.ProjectDescriptionOperator.GetProjectDescription_FromLibraryDescription(
+            var projectDescription = Instances.ProjectDescriptionOperator.Get_ProjectDescription_FromLibraryDescription(
                 libraryContext.LibraryDescription);
 
             var projectContext = new ProjectContext

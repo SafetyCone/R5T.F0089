@@ -19,7 +19,7 @@ namespace R5T.F0089
 			string instanceTypeNameStem,
 			InstanceTypeInformation instanceTypeInformation)
 		{
-            var namespaceName = F0040.F000.ProjectNamespacesOperator.Instance.GetDefaultNamespaceName_FromProjectFilePath(
+            var namespaceName = F0040.F000.ProjectNamespacesOperator.Instance.Get_DefaultNamespaceName_FromProjectFilePath(
                 projectFilePath);
 
 			var classTypeName = F0000.TypeNameOperator.Instance.GetClassTypeName(instanceTypeNameStem);
@@ -35,7 +35,7 @@ namespace R5T.F0089
             var markerInterfaceNamespaceName = F0000.NamespacedTypeNameOperator.Instance.Get_NamespaceName(
                 instanceTypeInformation.MarkerInterfaceNamespacedTypeName);
 
-			var interfacesDirectoryPath = ProjectPathsOperator.Instance.GetPath_ForProjectDirectoryRelativePath(
+			var interfacesDirectoryPath = ProjectPathsOperator.Instance.Get_Path_ForProjectDirectoryRelativePath(
 				projectFilePath,
 				instanceTypeInformation.InterfacesProjectDirectoryRelativeDirectoryPath);
 
@@ -45,7 +45,7 @@ namespace R5T.F0089
 				interfacesDirectoryPath,
 				interfaceCodeFileName);
 
-			var classesDirectoryPath = ProjectPathsOperator.Instance.GetPath_ForProjectDirectoryRelativePath(
+			var classesDirectoryPath = ProjectPathsOperator.Instance.Get_Path_ForProjectDirectoryRelativePath(
 				projectFilePath,
 				ProjectDirectoryRelativePath.Instance.InstanceClassesDirectory);
 

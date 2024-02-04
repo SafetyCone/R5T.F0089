@@ -14,7 +14,7 @@ namespace R5T.F0089
             string projectFilePath,
             string componentName)
         {
-            var namespaceName = F0040.F000.ProjectNamespacesOperator.Instance.GetDefaultNamespaceName_FromProjectFilePath(projectFilePath);
+            var namespaceName = F0040.F000.ProjectNamespacesOperator.Instance.Get_DefaultNamespaceName_FromProjectFilePath(projectFilePath);
 
             var markupFilePath = F0052.ProjectPathsOperator.Instance.GetComponentMarkupFilePath(
                 projectFilePath,
@@ -39,7 +39,7 @@ namespace R5T.F0089
 			string projectFilePath,
 			string className)
 		{
-            var namespaceName = F0040.F000.ProjectNamespacesOperator.Instance.GetDefaultNamespaceName_FromProjectFilePath(projectFilePath);
+            var namespaceName = F0040.F000.ProjectNamespacesOperator.Instance.Get_DefaultNamespaceName_FromProjectFilePath(projectFilePath);
 
             var classFilePath = F0052.ProjectPathsOperator.Instance.GetClassCodeFilePath(
                 projectFilePath,
@@ -59,7 +59,7 @@ namespace R5T.F0089
             string projectFilePath,
             string interfaceName)
         {
-            var namespaceName = F0040.F000.ProjectNamespacesOperator.Instance.GetDefaultNamespaceName_FromProjectFilePath(projectFilePath);
+            var namespaceName = F0040.F000.ProjectNamespacesOperator.Instance.Get_DefaultNamespaceName_FromProjectFilePath(projectFilePath);
 
             var classFilePath = F0052.ProjectPathsOperator.Instance.GetInterfaceCodeFilePath(
                 projectFilePath,

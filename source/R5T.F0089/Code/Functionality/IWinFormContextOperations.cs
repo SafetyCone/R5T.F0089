@@ -15,7 +15,7 @@ namespace R5T.F0089
             string projectFilePath,
             string formName)
         {
-            var namspaceName = F0040.F000.ProjectNamespacesOperator.Instance.GetDefaultNamespaceName_FromProjectFilePath(projectFilePath);
+            var namspaceName = F0040.F000.ProjectNamespacesOperator.Instance.Get_DefaultNamespaceName_FromProjectFilePath(projectFilePath);
 
             var formClassFileName = CodeFileNameOperator.Instance.GetWindowsFormClassFileName(formName);
             var formClassFilePath = ProjectPathsOperator.Instance.GetFormsDirectoryFilePath(
