@@ -53,7 +53,7 @@ namespace R5T.F0089
             string repositoryDescription,
             bool isPrivate)
         {
-            var privacyAdjustedRepositoryName = Instances.RepositoryNameOperator.AdjustRepositoryNameForPrivacy(
+            var privacyAdjustedRepositoryName = Instances.RepositoryNameOperator.AdjustName_ForPrivacy(
                 unadjustedRepositoryName,
                 isPrivate);
 
@@ -85,7 +85,7 @@ namespace R5T.F0089
             var unadjustedRepositoryName = Instances.RepositoryNameOperator.GetRepositoryName_FromLibraryName(
                 libraryContext.LibraryName);
 
-            var privacyAdjustedRepositoryName = Instances.RepositoryNameOperator.AdjustRepositoryNameForPrivacy(
+            var privacyAdjustedRepositoryName = Instances.RepositoryNameOperator.AdjustName_ForPrivacy(
                 unadjustedRepositoryName,
                 isPrivate);
 
@@ -120,7 +120,7 @@ namespace R5T.F0089
             var unadjustedRepositoryName = Instances.RepositoryNameOperator.GetRepositoryName_FromLibraryName(
                 libraryContext.LibraryName);
 
-            var privacyAdjustedRepositoryName = Instances.RepositoryNameOperator.AdjustRepositoryNameForPrivacy(
+            var privacyAdjustedRepositoryName = Instances.RepositoryNameOperator.AdjustName_ForPrivacy(
                 unadjustedRepositoryName,
                 isPrivate);
 
@@ -154,7 +154,7 @@ namespace R5T.F0089
 			var unadjustedRepositoryName = Instances.RepositoryNameOperator.GetRepositoryName_FromLibraryName(
 				libraryContext.LibraryName);
 
-			var privacyAdjustedRepositoryName = Instances.RepositoryNameOperator.AdjustRepositoryNameForPrivacy(
+			var privacyAdjustedRepositoryName = Instances.RepositoryNameOperator.AdjustName_ForPrivacy(
 				unadjustedRepositoryName,
 				isPrivate);
 
@@ -179,7 +179,7 @@ namespace R5T.F0089
             string unadjustedRepositoryName,
             bool isPrivate)
         {
-            var privacyAdjustedRepositoryName = Instances.RepositoryNameOperator.AdjustRepositoryNameForPrivacy(
+            var privacyAdjustedRepositoryName = Instances.RepositoryNameOperator.AdjustName_ForPrivacy(
                 unadjustedRepositoryName,
                 isPrivate);
 

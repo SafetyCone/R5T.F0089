@@ -31,7 +31,7 @@ namespace R5T.F0089
             var unadjustedSolutionName = Instances.SolutionNameOperator.GetUnadjustedSolutionName_FromUnadjustedLibraryName(
                 libraryContext.LibraryName);
 
-            var privacyAdjustedSolutionName = Instances.SolutionNameOperator.AdjustSolutionName_ForPrivacy(
+            var privacyAdjustedSolutionName = Instances.SolutionNameOperator.Adjust_Name_ForPrivacy(
                 unadjustedSolutionName,
                 isRepositoryPrivate);
 

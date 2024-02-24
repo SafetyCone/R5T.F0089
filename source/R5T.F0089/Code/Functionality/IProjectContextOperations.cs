@@ -149,10 +149,10 @@ namespace R5T.F0089
             LibraryContext libraryContext,
             string solutionDirectoryPath)
         {
-            var libraryConstructionProjectName = Instances.ProjectNameOperator.GetLibraryConstructionProjectName_FromLibraryName(
+            var libraryConstructionProjectName = Instances.ProjectNameOperator.Get_LibraryConstructionProjectName_FromLibraryName(
                 libraryContext.LibraryName);
 
-            var consoleLibraryProjectDescription = Instances.ProjectDescriptionOperator.GetLibraryConstructionProjectDescription_FromLibraryName(
+            var consoleLibraryProjectDescription = Instances.ProjectDescriptionOperator.Get_LibraryConstructionProjectDescription_FromLibraryName(
                 libraryContext.LibraryName);
 
             var projectContext = new ProjectContext
