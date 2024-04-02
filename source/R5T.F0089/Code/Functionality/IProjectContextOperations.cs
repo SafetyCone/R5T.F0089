@@ -80,10 +80,10 @@ namespace R5T.F0089
             LibraryContext libraryContext,
             string solutionDirectoryPath)
         {
-            var webBlazorClientProjectName = Instances.ProjectNameOperator.GetWebBlazorClientProjectName_FromLibraryName(
+            var webBlazorClientProjectName = Instances.ProjectNameOperator.Get_WebBlazorClientProjectName_FromLibraryName(
                 libraryContext.LibraryName);
 
-            var webBlazorProjectDescription = Instances.ProjectDescriptionOperator.GetWebBlazorClientProjectDescription_FromLibraryName(
+            var webBlazorProjectDescription = Instances.ProjectDescriptionOperator.Get_WebBlazorClientProjectDescription_FromLibraryName(
                 libraryContext.LibraryName);
 
             var projectContext = new ProjectContext
@@ -103,7 +103,7 @@ namespace R5T.F0089
             LibraryContext libraryContext,
             string solutionDirectoryPath)
         {
-            var webServerProjectName = Instances.ProjectNameOperator.GetWebServerProjectName_FromLibraryName(
+            var webServerProjectName = Instances.ProjectNameOperator.Get_WebServerProjectName_FromLibraryName(
                 libraryContext.LibraryName);
 
             var webServerForStaticRazorComponentsProjectDescription = Instances.ProjectDescriptionOperator.GetWebServerForStaticRazorComponentsProjectDescription_FromLibraryName(
@@ -126,10 +126,10 @@ namespace R5T.F0089
             LibraryContext libraryContext,
             string solutionDirectoryPath)
         {
-            var webServerForBlazorClientProjectName = Instances.ProjectNameOperator.GetWebServerForBlazorClientProjectName_FromLibraryName(
+            var webServerForBlazorClientProjectName = Instances.ProjectNameOperator.Get_WebServerForBlazorClientProjectName_FromLibraryName(
                 libraryContext.LibraryName);
 
-            var webServerForBlazorProjectDescription = Instances.ProjectDescriptionOperator.GetWebServerForBlazorClientProjectDescription_FromLibraryName(
+            var webServerForBlazorProjectDescription = Instances.ProjectDescriptionOperator.Get_WebServerForBlazorClientProjectDescription_FromLibraryName(
                 libraryContext.LibraryName);
 
             var projectContext = new ProjectContext
